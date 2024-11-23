@@ -2,8 +2,7 @@ package com.example.taskmanager;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +20,7 @@ public class MyController {
 //        return "Hello World";
 //    }
 
-    @RequestMapping("/tasks")
+    @GetMapping("/tasks")
     public TaskList tasks() {
         int taskId = 0;
         TaskList taskList = new TaskList();

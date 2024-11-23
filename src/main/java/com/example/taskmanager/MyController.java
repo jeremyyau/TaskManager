@@ -8,13 +8,20 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MyController {
 
-    @Autowired
-    @Qualifier("canonPrinter")
-    private Printer printer;
+//    @Autowired
+//    @Qualifier("hpPrinter")
+//    private Printer printer;
 
-    @RequestMapping("/test")
-    public String test() {
-        printer.print("Hi!");
-        return "Hello World";
+//    @RequestMapping("/test")
+//    public String test() {
+//        printer.print("Hi!");
+//        return "Hello World";
+//    }
+
+    @RequestMapping("/tasks")
+    public Task tasks() {
+        Task task = new Task();
+        task.setName("My Task");
+        return task;
     }
 }
